@@ -2,14 +2,14 @@
     text-align: center;
     padding: 15px;
     font-size: 18px;
-    background-color: rgb(18, 95, 182);
+    background-color: rgb(54, 54, 54);
     border-radius: 10px;
 }
 h1{
     color: white;
     text-align: center;
     padding: 15px;
-    background-color: rgba(0, 1, 48,0.6);
+    background-color: #333;
 }
 table {
     margin-left: auto;
@@ -20,8 +20,9 @@ tr{
     border-spacing:20px;
 }
 tr th{
-    background-color: rgb(0, 173, 204);
+    background-color: rgb(18, 95, 182);
     padding: 10px;
+    color: rgb(255, 255, 255);
     font-variant: small-caps;
 }
 tr td{
@@ -33,11 +34,13 @@ tr:nth-child(odd){
     background-color: rgb(175, 221, 248);
 }
 tr:nth-child(odd):hover{
-    background-color: rgb(135, 204, 245);
+    background-color: rgb(91, 191, 248);
+    color:#fff;
 }
 tr:nth-child(even){
-    background-color: rgb(221, 235, 243);
+    background-color: rgb(136, 136, 136);
 }
 tr:nth-child(even):hover{
-    background-color: rgb(192, 209, 219);
+    background-color: rgb(53, 53, 53);
+    color:#fff;
 }
