@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { user } from '../models/users'
+
 @Component({
   selector: 'app-leaderboard',
   templateUrl: './leaderboard.component.html',
