@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-  </head>
 
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-6">
-          <div id="ui">
-            <h1 class="text-center">UMUZI HACKATHON LEADERBOARD</h1>
-            <h1 class="text-center">LOGIN</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
 
-            <form>
-              <mat-form-field class="form">
-                <mat-label>Email</mat-label>
-                <input matInput />
-              </mat-form-field>
-              <mat-form-field class="form">
-                <mat-label>Username</mat-label>
-                <input matInput />
-              </mat-form-field>
-              <mat-form-field class="form">
-                <mat-label>Password</mat-label>
-                <input matInput />
-              </mat-form-field>
-              <button mat-button class="form">LOGIN</button>
-            </form>
-          </div>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div id="ui">
+          <h1 class="text-center">UMUZI HACKATHON LEADERBOARD</h1>
+          <h1 class="text-center">LOGIN</h1>
+
+          <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onLoginSubmit()" novalidate>
+            <mat-form-field class="form">
+              <mat-label>Email</mat-label>
+              <input id="email" matInput formControlName="email" [(ngModel)]="user.email"
+                placeholder="Please Enter Email" />
+            </mat-form-field>
+
+            <mat-form-field class="form">
+              <mat-label>Username</mat-label>
+              <input id="username" matInput formControlName="username" [(ngModel)]="user.username"
+                placeholder="Please Enter Username" />
+            </mat-form-field>
+
+            <mat-form-field class="form">
+              <mat-label>Password</mat-label>
+              <input id="password" matInput formControlName="password" [(ngModel)]="user.password"
+                placeholder="Please Enter Password" />
+
+            </mat-form-field>
+
+            <button mat-button type="submit" class="form">LOGIN</button>
+          </form>
+
         </div>
-
-        <div class="col-lg-3"></div>
       </div>
+      <div class="col-lg-3"></div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
