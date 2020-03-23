@@ -1,4 +1,4 @@
-package com.Hackathon_LeaderBoard;
+package com.Hackathon_LeaderBoard.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.NotBlank;

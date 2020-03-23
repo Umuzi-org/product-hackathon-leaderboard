@@ -1,4 +1,4 @@
-package com.heckathon.service;
+package com.Hackathon_LeaderBoard.service;
 
 import java.sql.SQLException;
 

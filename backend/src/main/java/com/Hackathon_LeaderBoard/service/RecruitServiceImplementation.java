@@ -1,4 +1,4 @@
-package com.heckathon.service;
+package com.Hackathon_LeaderBoard.service;
 
 import com.heckathon.dao.RecruitDao;
 import com.heckathon.model.Recruit;
