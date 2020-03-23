@@ -5,9 +5,23 @@
     background-color: rgb(54, 54, 54);
     border-radius: 10px;
 }
+#posRanked{
+    margin: 20px;
+    padding: 5px;
+    background-color: rgb(211, 210, 210);
+}
 h1{
     color: white;
     text-align: center;
     padding: 15px;
     background-color: #333;
+}
+.allocation{
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 18px;
+}
+#submitButtn{
+    color: white;
+    background-color: rgb(54, 54, 54);
 }
