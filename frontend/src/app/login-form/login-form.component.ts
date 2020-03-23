@@ -36,7 +36,7 @@ export class LoginFormComponent implements OnInit {
   }
 
 
-  registerClicked(): void {
+  loginClicked(): void {
     if (this.form.invalid) {
       alert('Invalid Login:Attempt failed');
       return;
