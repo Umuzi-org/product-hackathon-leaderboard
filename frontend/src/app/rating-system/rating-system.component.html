@@ -1,0 +1,12 @@
+<div id="header">
+  <h2>Rating System</h2>
+</div>
+<div id="ranking">
+  <h3>hackathon rank</h3>
+<mat-form-field>
+  <mat-label>Position ranked</mat-label>
+  <mat-select disableRipple required>
+    <mat-option *ngFor="let rank of rankings" [value]="rank.value">{{rank.viewValue}}</mat-option>
+  </mat-select>
+</mat-form-field>
+</div>

@@ -1,0 +1,19 @@
+#header{
+    text-align: center;
+    color: white;
+    padding: 5px;
+    margin: 15px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 10px;
+}
+h3{
+    font-variant: small-caps;
+}
+#ranking{
+    padding: 10px;
+    margin: 15px;
+    background-color: rgb(109, 109, 109);
+    color: white;
+    border-radius: 10px;
+
+}
