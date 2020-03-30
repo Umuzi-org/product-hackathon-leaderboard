@@ -1,21 +1,33 @@
 <h1 id="header">RATING SYSTEM</h1>
 <div id="posRanked">
-<h3>Position ranked</h3>
-<p>This rating is based on the position you aquired at a hackathon event.
-    <br><span class="allocation">points allocation:</span>
-    <br> <span class="positions"> First position = 3 points
-    <br> Second position = 2 points
-    <br> Third position = 1 point
-    <br> Other = 0 points
-</span>
-</p>
-<label for="position">Choose your position: </label>
-
-<select id="position">
-    <option value="1">First</option>
-    <option value="2">Second</option>
-    <option value="3">Third</option>
-    <option value="Other" selected>Other</option>
-</select><br><br>
-<button id="submitButtn">Submit</button>
+    <h3>Position ranked</h3>
+        <p>
+            This rating is based on the position you aquired at a hackathon event.
+            <br><span class="allocation">points allocation:</span>
+            <br> <span class="positions"> First position = 3 points
+            <br> Second position = 2 points
+            <br> Third position = 1 point
+            <br> Other = 0 points</span>
+        </p>
+        <label for="position">Choose your position: </label>
+        <select>
+            <option value="1">First</option>
+            <option value="2">Second</option>
+            <option value="3">Third</option>
+            <option value="Other" selected>Other</option>
+        </select>
+        <br><br>
+        <button id="submitButtn">Submit</button>
+        <!-- The below does not respond on a webpage, still trying to make it work -->
+    <!-- <mat-form-field>
+        <label for="position">Choose your position: </label>
+        <mat-select>
+            <mat-option value="1">First</mat-option>
+            <mat-option value="2">Second</mat-option>
+            <mat-option value="3">Third</mat-option>
+            <mat-option value="Other" selected>Other</mat-option>
+        </mat-select>
+        <br><br>
+        <button id="submitButtn">Submit</button>
+    </mat-form-field> -->
 </div>
