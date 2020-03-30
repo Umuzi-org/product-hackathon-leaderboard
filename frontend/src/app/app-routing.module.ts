@@ -7,9 +7,8 @@ const routes: Routes = [
     path:'ratingSystem', component:RatingSystemComponent
   }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
