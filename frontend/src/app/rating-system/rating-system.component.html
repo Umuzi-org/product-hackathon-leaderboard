@@ -1,13 +1,23 @@
 <div id="header">
   <h2>Rating System</h2>
 </div>
-<div id="ranking">
-  <h3>hackathon rank</h3>
-<mat-form-field>
-  <mat-label>Position ranked</mat-label>
-  <mat-select disableRipple required>
-    <mat-option *ngFor="let rank of rankings" [value]="rank.value">{{rank.viewValue}}</mat-option>
-  </mat-select>
-</mat-form-field><br>
-<button mat-raised-button>Submit</button>
-</div>
+<table class="ranking" cellspacing='0'>
+    <h3>hackathon rank</h3>
+    <tr>
+      <td>
+        <mat-form-field class="sub-form">
+          <mat-label>Position ranked</mat-label>
+            <mat-select [(ngModel)]="selectedPos" required>
+              <mat-option *ngFor="let rank of rankings" [value]="rank.value">{{rank.viewValue}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="sub-form">
+          <mat-label>User</mat-label>
+            <input matInput disabled value="Kagiso Raseroka">
+        </mat-form-field>
+      </td><br>
+    </tr>
+    <button (click)="assignValue(selectedPos)" mat-raised-button >Submit</button>
+</table>

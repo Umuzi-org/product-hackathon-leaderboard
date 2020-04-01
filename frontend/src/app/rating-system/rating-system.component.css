@@ -1,7 +1,7 @@
 #header{
     text-align: center;
     color: white;
-    padding: 5px;
+    padding: 1px;
     margin: 15px;
     background-color: rgb(54, 54, 54);
     border-radius: 10px;
@@ -9,9 +9,13 @@
 h3{
     font-variant: small-caps;
 }
-#ranking{
+.ranking{
+    min-width: 5px;
+    max-width: 900px;
+    width: 96%;
     padding: 10px;
-    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: rgb(109, 109, 109);
     color: white;
     border-radius: 10px;
