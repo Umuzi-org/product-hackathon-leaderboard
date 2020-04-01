@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hackathon-LeaderBord"
+    }
+  },
+  "defaultProject": "hackathon-LeaderBord",
+  "cli": {
+    "analytics": "34458a90-be5d-4316-886e-0873fa0aecf7"
+  }
 }

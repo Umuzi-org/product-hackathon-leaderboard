@@ -1,47 +1,28 @@
 package com.Hackathon_LeaderBoard.service;
 
-import com.heckathon.dao.RecruitDao;
-import com.heckathon.model.Recruit;
+import com.Hackathon_LeaderBoard.dao.RecruitRepository;
+import com.Hackathon_LeaderBoard.model.Recruit;
+import com.Hackathon_LeaderBoard.model.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import java.sql.SQLException;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class RecruitService implements RecruitService {
-    private final RecruitDao recruitDao;
+public class RecruitServiceImplementation implements RecruitService {
 
     @Autowired
-    public RecruitService(@Qualifier("postgres") RecruitDao recruitDao) {
-        this.recruitDao = recruitDao;
+    public RecruitRepository recruitRepo;
+
+    public void addUser(Recruit recruit) {
+        recruitRepo.save(recruit);
     }
 
-    public int addRecruit(Recruit recruit) {
-        return recruitDao.insertRecruit(recruit);
-    }
-
-    public List<Recruit> getAllRecruits () {
-        return recruitDao.selectAllRecruits();
-    }
-
-    public Optional<Recruit> getRecruitById(UUID id) {
-        return recruitDao.selectRecruitById(id);
-    }
-
-    public int deleteRecruit(UUID id) {
-        return recruitDao.deleteRecruitById(id);
-    }
-
-    public int updateRecruit(UUID id, Recruit newRecruit) {
-        return recruitDao.updateRecruitById(id, newRecruit);
-    }
-
-    @Override
-    public boolean isValidUser(String username, String password) throws SQLException
-    {
-        return userDao.isValidUser(username, password);
+    public Recruit validateRecruit(Login login) {
+        return recruitRepo.findById(login.getUsername()).get();
     }
 }
