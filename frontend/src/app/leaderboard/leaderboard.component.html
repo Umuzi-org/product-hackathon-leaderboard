@@ -1,0 +1,15 @@
+<h1 id="header">HACKATHON LEADERBOARD</h1>
+<table>
+        <tr>
+            <th>Rank</th>
+            <th>User</th>
+            <th>Points</th>
+            <th>Points in last 30 days</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.rank}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.points}}</td>
+            <td>{{user.pointsInLastMonth}}</td>
+        </tr>
+</table>

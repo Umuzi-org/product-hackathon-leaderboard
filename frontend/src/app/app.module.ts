@@ -11,11 +11,13 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RatingSystemComponent
+    RatingSystemComponent,
+    LeaderboardComponent
   ],
   imports: [
     BrowserModule,
