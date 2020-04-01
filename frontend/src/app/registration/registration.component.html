@@ -1,0 +1,165 @@
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div id="ui">
+                    <h1 class="text-center">UMUZI HACKATHON LEADERBOARD</h1>
+                    <h1 class="text-center">REGISTER</h1>
+                    <form [formGroup]="registrationForm" (ngSubmit)="registrationForm.valid && onRegistrationSubmit()" novalidate>
+                        <div class="row">
+                            <div class="col-lg-6">
+                    
+                                <mat-form-field>
+                                    <mat-label>Enter your firstName</mat-label>
+                                    <input id="firstName"
+                                       class="form-control"
+                                       matInput
+                                       formControlName="firstName"
+                                       [(ngModel)]="user.firstName"
+                                       placeholder="Joshua" />
+                                </mat-form-field>
+                            </div>
+                            <div class="col-lg-6">
+                                <mat-form-field>
+                                    <mat-label>Enter your lastName</mat-label>
+                                    <input id="lasrName"
+                                       class="form-control"
+                                       matInput
+                                       formControlName="lastName"
+                                       [(ngModel)]="user.lastName"
+                                       placeholder="Williams" />
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Enter your email</mat-label>
+                                <input id="email"
+                                       class="form-control"
+                                       matInput
+                                       formControlName="email"
+                                       [(ngModel)]="user.email"
+                                       placeholder="pat@example.com" />
+                            </mat-form-field> 
+                        </div>   
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Confirm email</mat-label>
+                                <input id="reTypeEmail"
+                                       class="form-control"
+                                       matInput
+                                       formControlName="reTypeEmail"
+                                       [(ngModel)]="user.reTypeEmail"
+                                       placeholder="pat@example.com" />
+                            </mat-form-field> 
+                        </div> 
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <mat-form-field>
+                                    <mat-label>Enter your password</mat-label>
+                                    <input id="password"
+                                           class="form-control"
+                                           matInput
+                                           formControlName="password"
+                                           [(ngModel)]="user.password"/>
+                                </mat-form-field> 
+                            </div>
+                            <div class="col-lg-6">
+                                <mat-form-field>
+                                    <mat-label>Confirm password</mat-label>
+                                    <input id="reTypePassword"
+                                           class="form-control"
+                                           matInput
+                                           formControlName="reTypePassword"
+                                           [(ngModel)]="user.reTypePassword"/>
+                                </mat-form-field> 
+                            </div>
+                        </div>
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Enter your cohort number</mat-label>
+                                <input id="cohortNumber"
+                                       class="form-control"
+                                       matInput
+                                       formControlName="cohortNumber"
+                                       [(ngModel)]="user.cohortNumber"
+                                       placeholder="20" />
+                            </mat-form-field> 
+                        </div>  
+
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Department</mat-label>
+                                <mat-select>
+                                  <mat-option *ngFor="let department of departments" [value]="department.value">
+                                      {{department.viewValue}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+
+                        <div>
+                            <mat-form-field>
+                                <mat-label>Gender</mat-label>
+                                <mat-select>
+                                  <mat-option *ngFor="let gender of genders" [value]="gender.value">
+                                      {{gender.viewValue}}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+
+                    </form>
+            
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+
+<!-- <div>
+    <div>
+        <div>Registration</div>
+        <form [formGroup]="registrationForm" (ngSubmit)="registrationForm.valid && onRegistrationSubmit()" novalidate>
+            <div class="form-container">
+                <mat-form-field>
+                    <input id="firstName"
+                           matInput
+                           formControlName="firstName"
+                           [(ngModel)]="user.firstName"
+                           placeholder="Enter your name" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input id="email"
+                           matInput
+                           formControlName="email"
+                           [(ngModel)]="user.email"
+                           placeholder="Enter your email" />
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input id="password"
+                           matInput
+                           formControlName="password"
+                           [(ngModel)]="user.password"
+                           placeholder="Enter your password"
+                           [type]="hide ? 'password':'text'" />
+                        <mat-icon matSuffix (click)="hide = !hide">
+                            {{hide ? 'visibility' : 'visibility_off'}}
+                        </mat-icon>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.valid">Registration</button>
+            </div>
+        </form>
+    </div>
+</div> -->

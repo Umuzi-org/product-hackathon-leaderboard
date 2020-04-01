@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -123,6 +124,6 @@
   },
   "defaultProject": "frontend",
   "cli": {
-    "analytics": "f7678b58-4911-4d56-8649-1b6a92b58068"
+    "analytics": "6a049c11-8a88-4732-b0b9-fc8e9d3bc519"
   }
 }
