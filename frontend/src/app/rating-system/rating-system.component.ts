@@ -31,8 +31,8 @@ export class RatingSystemComponent {
   assignValue(params:number) {
     if(params!=undefined){
       this.users[0].points=this.users[0].points+params
+      this.users[0].pointsInLastMonth=this.users[0].pointsInLastMonth+params
     }
     alert(this.users[0].points)
   }
-  // rating = new FormControl();
 }
