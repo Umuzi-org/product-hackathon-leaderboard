@@ -6,5 +6,4 @@ import com.Hackathon_LeaderBoard.model.Recruit;
 
 @Repository
 public interface RecruitRepository extends JpaRepository<Recruit, String> {
-
 }
