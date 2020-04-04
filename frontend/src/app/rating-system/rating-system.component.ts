@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { user } from '../models/user.model'
+import { Component, OnInit } from '@angular/core';
+import userdata from '../assets/users.json'
+
 interface Ranking {
   value: number;
   viewValue: string;
@@ -9,18 +10,8 @@ interface Ranking {
   templateUrl: './rating-system.component.html',
   styleUrls: ['./rating-system.component.css']
 })
-
-export class RatingSystemComponent {
-  users:user[];
-  ngOnInit(): void{
-    this.users=[
-      {
-        rank:1,
-        name:'Kagiso Raseroka',
-        points: 35,
-        pointsInLastMonth: 10
-      }
-    ]
+export class RatingSystemComponent implements OnInit {
+  ngOnInit() {
   }
   rankings: Ranking[] = [
     {value: 3, viewValue:'First'},
@@ -28,11 +19,23 @@ export class RatingSystemComponent {
     {value: 1, viewValue:'Third'},
     {value: 0, viewValue:'Other'}
   ];
-  assignValue(params:number) {
-    if(params!=undefined){
-      this.users[0].points=this.users[0].points+params
-      this.users[0].pointsInLastMonth=this.users[0].pointsInLastMonth+params
+  title = 'read-json-users'
+  users: any = userdata;
+  public assignValue(pos:number,player:string) {
+    for(var index=0;index<this.users.length;index++){
+      var current_user = this.users[index].name.toLowerCase();
+      var player_toLower = player.toLowerCase();
+      
+      if(player_toLower == current_user){
+        this.users[index].points=this.users[index].points+pos;
+        this.users[index].pointsInLastMonth=this.users[index].pointsInLastMonth+pos;
+        var json = JSON.stringify(userdata);
+        console.log(json);
+        return json;
+      }
+      if(index==this.users.length-1){
+        alert("User '"+player+"' not found!\nplease input your full names");
+      }
     }
-    alert(this.users[0].points)
   }
 }

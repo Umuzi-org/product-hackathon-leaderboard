@@ -90,7 +90,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -126,6 +126,6 @@
   },
   "defaultProject": "hackathon-LeaderBord",
   "cli": {
-    "analytics": "40f90927-9e9c-423d-a1dc-c086269d5f9f"
+    "analytics": true
   }
 }

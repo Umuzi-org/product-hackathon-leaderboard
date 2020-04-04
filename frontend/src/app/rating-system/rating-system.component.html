@@ -15,9 +15,9 @@
       <td>
         <mat-form-field class="sub-form">
           <mat-label>User</mat-label>
-            <input matInput disabled value="Kagiso Raseroka">
+            <input matInput required [(ngModel)]="user_name">
         </mat-form-field>
       </td><br>
     </tr>
-    <button (click)="assignValue(selectedPos)" mat-raised-button >Submit</button>
+    <button (click)="assignValue(selectedPos,user_name)" mat-raised-button >Submit</button>
 </table>
