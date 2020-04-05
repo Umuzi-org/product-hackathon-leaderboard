@@ -29,7 +29,7 @@ export class RatingSystemComponent implements OnInit {
       if(player_toLower == current_user){
         this.users[index].points=this.users[index].points+pos;
         this.users[index].pointsInLastMonth=this.users[index].pointsInLastMonth+pos;
-        var json = JSON.stringify(userdata);
+        var json = JSON.stringify(userdata[index]);
         console.log(json);
         return json;
       }
