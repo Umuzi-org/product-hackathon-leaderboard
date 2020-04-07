@@ -1,0 +1,62 @@
+[
+    {
+      "rank": 1,
+      "name": "John Doe",
+      "points": 59,
+      "pointsInLastMonth":5
+    },
+    {
+      "rank": 2,
+      "name": "Jurgen Klopp",
+      "points": 53,
+      "pointsInLastMonth":5
+    },
+    {
+      "rank": 3,
+      "name": "Mike Joe",
+      "points": 50,
+      "pointsInLastMonth":3
+    },
+    {
+      "rank": 4,
+      "name": "Michael Jackson",
+      "points": 49,
+      "pointsInLastMonth":6
+    },
+    {
+      "rank": 5,
+      "name": "Mickey Doe",
+      "points": 48,
+      "pointsInLastMonth":0
+    },
+    {
+      "rank": 6,
+      "name": "Sam Smith",
+      "points": 47,
+      "pointsInLastMonth":8
+    },
+    {
+      "rank": 7,
+      "name": "Sam Sueqq",
+      "points": 35,
+      "pointsInLastMonth":0
+    },
+    {
+      "rank": 8,
+      "name": "John Brown",
+      "points": 27,
+      "pointsInLastMonth":0
+    },
+    {
+      "rank": 9,
+      "name": "Frank Jim",
+      "points": 23,
+      "pointsInLastMonth":2
+    },
+    {
+      "rank": 10,
+      "name": "Bob Simpson",
+      "points": 15,
+      "pointsInLastMonth":7
+    }
+]
