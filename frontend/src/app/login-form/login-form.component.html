@@ -1,0 +1,38 @@
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+</head>
+
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+  <h1 class="text-center">UMUZI HACKATHON LEADERBOARD</h1>
+  <h1 class="text-center">LOGIN</h1>
+
+  <form [formGroup]="form">
+    <mat-form-field class="forms">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+      <mat-hint>
+        Email must be a valid email address
+      </mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="forms">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="userName">
+      <mat-hint>
+        User name allowed characters are letters and numbers only. No spaces.
+      </mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="forms">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password">
+      <mat-hint>
+        Password minimum length 6, requires one letter, one number, one special character !@#$%^&* no spaces.
+      </mat-hint>
+    </mat-form-field>
+
+    <button mat-button (click)="loginClicked();" color="primary" class="forms">LOGIN</button>
+  </form>
+</div>
